@@ -3917,6 +3917,7 @@ input[type="button"].btn-block {
 }
 
 .navbar {
+  justify-content: flex-start;
   position: relative;
   display: -ms-flexbox;
   display: flex;
@@ -3942,13 +3943,9 @@ input[type="button"].btn-block {
 }
 
 .navbar-brand {
-  display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  line-height: inherit;
-  white-space: nowrap;
+  margin: 0px;
+  float: none;        /* <-- evita empujarlo a la derecha */
+  margin-top: 20px;
 }
 
 .navbar-brand:hover, .navbar-brand:focus {
@@ -3956,6 +3953,8 @@ input[type="button"].btn-block {
 }
 
 .navbar-nav {
+  margin-left: 16px;
+  margin-left: 20px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -7661,9 +7660,15 @@ button.bg-dark:focus {
   margin-top: auto !important;
 }
 
-.mr-auto,
-.mx-auto {
-  margin-right: auto !important;
+.mr-auto { 
+  margin-right: auto !important; 
+  margin-left: 0 !important; 
+  text-align: inherit !important; 
+}
+.mx-auto { 
+  margin-left: auto !important; 
+  margin-right: auto !important; 
+  text-align: inherit !important; 
 }
 
 .mb-auto,
