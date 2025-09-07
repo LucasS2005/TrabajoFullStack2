@@ -44,7 +44,8 @@
                <li class="item_nav"><a class="enlace_nav" href="coffees.html">Coffees</a></li>
                <li class="item_nav"><a class="enlace_nav" href="shop.html">Shop</a></li>
                <li class="item_nav"><a class="enlace_nav" href="blog.html">Blog</a></li>
-               <li class="item_nav activo"><a class="enlace_nav" href="contact.html">Contact</a></li>
+               <li class="item_nav activo"><a class="enlace_nav" href="contact.html">Contacto</a></li>
+
             </ul>
 
             <div class="boton_login">
@@ -58,24 +59,27 @@
    </div>
    <!-- header section end -->
    <!-- contact section start -->
-   <div class="contact_section layout_padding">
+   <div class="seccion-contacto layout_padding">
       <div class="container">
          <div class="row">
             <div class="col-sm-12">
-               <h1 class="contact_taital">Contactanos aqui</h1>
+               <h1 class="titulo-contacto">Contactanos aqui</h1>
             </div>
          </div>
       </div>
       <div class="container-fluid">
-         <div class="contact_section_2">
+         <div class="seccion-contacto-2">
             <div class="row">
                <div class="col-md-12">
-                  <div class="mail_section_1">
-                     <input type="text" class="mail_text" placeholder="Your Name" name="Your Name">
-                     <input type="text" class="mail_text" placeholder="Your Email" name="Your Email">
-                     <input type="text" class="mail_text" placeholder="Your Phone" name="Your Phone">
-                     <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
-                     <div class="send_bt"><a href="#">Send</a></div>
+                  <form id="form-contacto" class="formulario-contacto" novalidate>
+                     <input type="text" class="campo-texto" placeholder="Tu Nombre" name="Nombre" required>
+                     <input type="text" class="mail_text" placeholder="Tu Correo" name="Email" required>
+                     <input type="text" class="mail_text" placeholder="Numero Telefonico" name="Telefono" required>
+                     <textarea class="campo-mensaje" placeholder="Mensaje" rows="5" id="comment" name="Mensaje" required></textarea>
+                     <div class="send_bt"><button type="submit">Enviar</button></div>
+                     <p id="msj-exito" style="display:none; color:#4CAF50; text-align:center; margin-top:12px;">
+                       Gracias Tu mensaje fue enviado :)
+                     </p>
                   </div>
                </div>
                <div class="map_main">
@@ -97,7 +101,7 @@
          <div class="row">
 
             <div class="footer">
-               
+
                <div class="iconos_footer">
                   <ul>
                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -107,21 +111,21 @@
                   </ul>
                </div>
 
-               
+
                <div class="contacto_footer">
                   <p><i class="fa fa-phone"></i> +569 57291854 &nbsp;&nbsp;
                      <i class="fa fa-envelope"></i> duocuc@gmail.com
                   </p>
                </div>
 
-              
+
                <div class="suscripcion_footer">
                   <input type="email" class="poner_correo" placeholder="Tu correo">
                   <button class="boton_enviar"><i class="fa fa-arrow-right"></i></button>
                </div>
             </div>
 
-            
+
             <div class="texto_footer">
                <p>2025 Todos los Derechos Reservados. Diseñado por Lucas 🚀</p>
             </div>
@@ -139,6 +143,31 @@
    <!-- sidebar -->
    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
    <script src="js/custom.js"></script>
+   <script>
+document.getElementById('form-contacto').addEventListener('submit', function(e){
+  e.preventDefault(); 
+
+  const btn = this.querySelector('.send_bt button');
+  btn.disabled = true;
+  btn.textContent = 'Enviando...';
+
+ 
+  if (!this.checkValidity()) {
+    btn.disabled = false;
+    btn.textContent = 'Enviar';
+    this.reportValidity();
+    return;
+  }
+
+  
+  setTimeout(() => {
+    document.getElementById('msj-exito').style.display = 'block';
+    this.reset(); 
+    btn.disabled = false;
+    btn.textContent = 'Enviar';
+  }, 1000);
+});
+</script>
 </body>
 
 </html>
