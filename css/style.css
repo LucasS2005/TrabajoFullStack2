@@ -119,13 +119,18 @@ button{border:0; margin:0; padding:0; cursor:pointer;}
 .about_section{ width:100%; float:left; }
 .about_section_2{ width:100%; float:left; }
 .about_taital{ width:100%; float:left; font-size:40px; color:#3b3b3b; text-transform:uppercase; font-weight:bold; padding-bottom:0; }
-.about_taital_box{ width:100%; float:left; padding-top:15px; }
+.about_taital_box{ width:100%; float:left; padding-top:15px; transform: translateY(166px); }
+
 
 /* Clase que usas en la imagen de about */
 .sobre_imagen{
+
   width:100%;
   border-radius:55%;
   margin-left:50%;
+  margin-top: -200px;
+
+  
 }
 
 .about_taital_1{ width:100%; float:left; font-size:30px; color:#3b3b3b; margin:10px 0; }
@@ -306,10 +311,10 @@ body{ margin-left:220px; background-color:#ffffff; }
 
 .footer {
   width: 100%;
-  background-color: #000000; /* negro base */
+  background-color: #000000; 
   padding: 40px 20px;
   text-align: center;
-  margin-top: auto; /* asegura que quede abajo */
+  margin-top: auto; 
 }
 
 .iconos_footer ul {
@@ -323,8 +328,8 @@ body{ margin-left:220px; background-color:#ffffff; }
 
 .iconos_footer ul li a {
   display: inline-block;
-  background-color: #520b6e; /* morado */
-  color: #4CAF50;           /* verde */
+  background-color: #520b6e;
+  color: #4CAF50;          
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -335,7 +340,7 @@ body{ margin-left:220px; background-color:#ffffff; }
 }
 
 .iconos_footer ul li a:hover {
-  background-color: #4CAF50; /* verde */
+  background-color: #4CAF50; 
   color: #ffffff;
 }
 
@@ -361,7 +366,7 @@ body{ margin-left:220px; background-color:#ffffff; }
 }
 
 .boton_enviar {
-  background-color: #4CAF50; /* verde */
+  background-color: #4CAF50; 
   color: #ffffff;
   border: none;
   padding: 10px 15px;
@@ -371,12 +376,12 @@ body{ margin-left:220px; background-color:#ffffff; }
 }
 
 .boton_enviar:hover {
-  background-color: #520b6e; /* morado */
+  background-color: #520b6e; 
 }
 
 .texto_footer {
   width: 100%;
-  background-color: #520b6e; /* franja morada inferior */
+  background-color: #520b6e; 
   padding: 10px;
   text-align: center;
 }
@@ -397,12 +402,30 @@ body {
   flex-direction: column;
 }
 
-/* el contenedor del contenido principal */
+
 .contenido_principal {
-  flex: 1; /* ocupa todo el espacio antes del footer */
+  flex: 1; 
 }
 
-/* asegura que el footer quede al final */
+
 .footer {
   margin-top: auto;
+}
+
+.sobre_section_2 .row{
+  display: flex;
+  align-items: center;   
+  min-height: 520px;    
+}
+
+body {
+  margin-left: 220px;
+  background: linear-gradient(160deg, #000000 0%, #520b6e 50%, #4CAF50 90%);
+}
+
+.titulo-sobre,
+.subtitulo-sobre,
+.texto-sobre,
+.titulo-contacto {
+  color: #ffffff !important; /* blanco para contraste */
 }
