@@ -147,7 +147,7 @@ button{border:0; margin:0; padding:0; cursor:pointer;}
 .coffee_img img{ width:100%; float:left; }
 .coffee_box{ width:100%; float:left; background-color:#242c2f;}
 .coffee_box:hover{ background-color:#f01c1c; }
-.types_text{ width:100%; float:left; font-size:22px; color:#fefefd; text-align:center; font-weight:bold; }
+.types_text{ width:100%; float:left; font-size:15px; color:#fefefd; text-align:center; font-weight:bold; }
 .looking_text{ width:100%; float:left; font-size:14px; color:#fefefd; text-align:center; margin:0; }
 .read_bt{ width:150px; margin:0 auto; text-align:center; padding-top:20px; display:flex; }
 .read_bt a{ width:100%; float:left; font-size:16px; color:#fefefd; text-align:center; border-radius:5px; border:1px solid #fefefd; text-transform:uppercase; padding:8px; }
@@ -603,4 +603,93 @@ body {
 
 .carrusel-pequeno .carousel-indicators .active {
   background-color: #4CAF50;   
+}
+
+
+.productos_seccion_2 .carousel-item .row{
+  margin-left: -16px;   
+  margin-right: -16px;
+}
+
+.productos_seccion_2 .carousel-item [class*="col-"]{
+  padding-left: 16px;   
+  padding-right: 16px;
+  margin-bottom: 24px;  
+}
+
+
+@media (min-width: 992px){
+  .productos_seccion_2 .carousel-item .row{
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+  .productos_seccion_2 .carousel-item [class*="col-"]{
+    padding-left: 24px;
+    padding-right: 40px;
+  }
+}
+
+.productos_descuento{
+  padding: 12px 0 40px;
+}
+
+.titulo-secundaria{
+  top: 0;               
+  margin: 0 0 14px 0;     
+}
+
+.rejilla_productos{
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;                            
+}
+
+
+@media (min-width: 576px){
+  .rejilla_productos{ grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 768px){
+  .rejilla_productos{ grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 1200px){
+  .rejilla_productos{ grid-template-columns: repeat(5, 1fr); }
+}
+
+
+.tarjeta_producto .coffee_box{
+  padding: 12px;
+}
+
+.tarjeta_producto .types_text{
+  font-size: 14px;       
+}
+
+@media (max-width: 480px){
+  .rejilla_productos{
+    grid-template-columns: 1fr;   
+    gap: 16px;                   
+  }
+
+  .tarjeta_producto .coffee_img img{
+    max-width: 80%;             
+    margin: 0 auto;              
+  }
+
+  .tarjeta_producto .coffee_box{
+    padding: 10px;
+  }
+
+  .tarjeta_producto .types_text{
+    font-size: 14px;            
+  }
+
+  .tarjeta_producto .read_bt a{
+    font-size: 14px;            
+    padding: 6px 10px;
+  }
 }
