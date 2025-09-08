@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.registro_container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 400px;
+}
+
+.registro_form h2 {
+  text-align: center;
+  color: #6a1b9a; /* morado */
+  margin-bottom: 30px;
+}
+
+.registro_form input,
+.registro_form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.registro_form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2e7d32; /* verde */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.registro_form button:hover {
+  background-color: #6a1b9a; /* morado al pasar el mouse */
+}
+
+#mensajeError {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}

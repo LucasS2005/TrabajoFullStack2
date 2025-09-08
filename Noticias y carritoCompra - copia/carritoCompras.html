@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras - Farmacia Online</title>
+  <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+
+  <section class="seccion_carrito">
+    
+    <h2>Productos Disponibles</h2>
+    <div class="contenedor_productos">
+      <div class="tarjeta_producto">
+        <img src="imagenes/paracetamol_2.webp" alt="Paracetamol">
+        <h3>Paracetamol</h3>
+        <p>$3000</p>
+        <button class="agregar_carrito" data-nombre="Paracetamol" data-precio="3000">Agregar al carrito</button>
+      </div>
+      <div class="tarjeta_producto">
+        <img src="imagenes/ibuprofeno2.webp" alt="Ibuprofeno">
+        <h3>Ibuprofeno</h3>
+        <p>$2500</p>
+        <button class="agregar_carrito" data-nombre="Ibuprofeno" data-precio="2500">Agregar al carrito</button>
+      </div>
+      <div class="tarjeta_producto">
+        <img src="imagenes/vitaminaC2.png" alt="Vitamina C">
+        <h3>Vitamina C</h3>
+        <p>$2000</p>
+        <button class="agregar_carrito" data-nombre="Vitamina C" data-precio="2000">Agregar al carrito</button>
+      </div>
+      <!-- Nuevos productos -->
+      <div class="tarjeta_producto">
+        <img src="imagenes/omeprazol.jpg" alt="Omeprazol">
+        <h3>Omeprazol</h3>
+        <p>$3000</p>
+        <button class="agregar_carrito" data-nombre="Omeprazol" data-precio="3000">Agregar al carrito</button>
+      </div>
+      <div class="tarjeta_producto">
+        <img src="imagenes/crema.jpg" alt="Crema">
+        <h3>Crema</h3>
+        <p>$4000</p>
+        <button class="agregar_carrito" data-nombre="Crema" data-precio="4000">Agregar al carrito</button>
+      </div>
+      <div class="tarjeta_producto">
+        <img src="imagenes/shampoo.webp" alt="Shampoo">
+        <h3>Shampoo</h3>
+        <p>$3500</p>
+        <button class="agregar_carrito" data-nombre="Shampoo" data-precio="3500">Agregar al carrito</button>
+      </div>
+      <div class="tarjeta_producto">
+        <img src="imagenes/aspirina.png" alt="Aspirina">
+        <h3>Aspirina</h3>
+        <p>$2000</p>
+        <button class="agregar_carrito" data-nombre="Aspirina" data-precio="2000">Agregar al carrito</button>
+      </div>
+      <div class="tarjeta_producto">
+        <img src="imagenes/cepillo.jpg" alt="Cepillo">
+        <h3>Cepillo</h3>
+        <p>$2300</p>
+        <button class="agregar_carrito" data-nombre="Cepillo" data-precio="2300">Agregar al carrito</button>
+      </div>
+      <div class="tarjeta_producto">
+        <img src="imagenes/panales.webp" alt="Pañales">
+        <h3>Pañales</h3>
+        <p>$4000</p>
+        <button class="agregar_carrito" data-nombre="Pañales" data-precio="4000">Agregar al carrito</button>
+      </div>
+      <div class="tarjeta_producto">
+        <img src="imagenes/desodorante.webp" alt="Desodorante">
+        <h3>Desodorante</h3>
+        <p>$1300</p>
+        <button class="agregar_carrito" data-nombre="Desodorante" data-precio="1300">Agregar al carrito</button>
+      </div>
+      <div class="tarjeta_producto">
+        <img src="imagenes/bloqueador.webp" alt="Bloqueador">
+        <h3>Bloqueador</h3>
+        <p>$1400</p>
+        <button class="agregar_carrito" data-nombre="Bloqueador" data-precio="1400">Agregar al carrito</button>
+      </div>
+      <div class="tarjeta_producto">
+        <img src="imagenes/suerox.png" alt="SueroX">
+        <h3>SueroX</h3>
+        <p>$1200</p>
+        <button class="agregar_carrito" data-nombre="SueroX" data-precio="1200">Agregar al carrito</button>
+      </div>
+      <div class="tarjeta_producto">
+        <img src="imagenes/antigripales.jpg" alt="Kitadol antigripal">
+        <h3>Kitadol antigripal</h3>
+        <p>$2000</p>
+        <button class="agregar_carrito" data-nombre="Kitadol antigripal" data-precio="2000">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <h1>Productos</h1>
+    <div class="contenedor_carrito">
+
+      <table class="tabla_carrito">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+            <th>Eliminar</th>
+          </tr>
+        </thead>
+        <tbody id="items_carrito">
+        </tbody>
+      </table>
+
+      <div class="resumen_carrito">
+        <p>Total: $<span id="total_carrito">0</span></p>
+        <button id="btn_finalizar">Finalizar Compra</button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="carrito.js"></script>
+</body>
+</html>
