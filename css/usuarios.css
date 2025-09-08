@@ -1,0 +1,48 @@
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+body{min-height:100vh;background:linear-gradient(90deg,#6a1b9a,#2e7d32)}
+a{text-decoration:none}
+
+.seccion_usuarios{max-width:1100px;margin:24px auto;padding:0 16px}
+h1{color:#fff;text-align:center;margin-bottom:16px}
+
+.btn_volver{display:inline-block;margin:10px 0 16px;padding:8px 14px;border:1px solid #1e2a38;border-radius:8px;color:#1e2a38;background:#fff;font-weight:600}
+.btn_volver:hover{background:#1e2a38;color:#fff}
+
+.card{background:#fff;border-radius:16px;padding:16px;box-shadow:0 10px 20px rgba(0,0,0,.12);margin-bottom:18px}
+
+#titulo_form{margin-bottom:10px;color:#2e7d32}
+.fila{display:flex;flex-direction:column;gap:6px;margin:10px 0}
+.fila input,.fila select{padding:10px 12px;border:1px solid #dcdcdc;border-radius:10px}
+.fila_check{flex-direction:row;align-items:center;gap:10px}
+
+.acciones_form{display:flex;gap:10px;margin-top:12px}
+.btn_guardar{background:#6a1b9a;color:#fff;border:none;padding:10px 16px;border-radius:999px;font-weight:700;cursor:pointer}
+.btn_guardar:hover{opacity:.9}
+.btn_cancelar,.btn_outlined{background:#fff;color:#2e7d32;border:1px solid #2e7d32;padding:10px 16px;border-radius:999px;font-weight:700;cursor:pointer}
+.btn_cancelar:hover,.btn_outlined:hover{background:#2e7d32;color:#fff}
+
+.encabezado_lista{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.tabla_wrap{overflow:auto}
+.tabla_usuarios{width:100%;border-collapse:collapse}
+.tabla_usuarios th,.tabla_usuarios td{text-align:left;padding:10px 12px;border-bottom:1px solid #eee}
+.tabla_usuarios thead th{background:#2e7d32;color:#fff}
+
+.badge{background:transparent;border:none;padding:0;font-weight:600}
+.badge.activo{color:#000}
+.badge.inactivo{color:#000}
+.badge::before{content:"• "}
+
+.btn_sm{background:transparent!important;border:none!important;padding:0;font-weight:600;cursor:pointer}
+.btn_sm:hover,.btn_sm:focus-visible{text-decoration:underline;outline:none}
+.btn_ver{color:#000!important}
+.btn_editar{color:#000!important}
+.btn_eliminar{color:#000!important}
+
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.45);padding:16px}
+.modal[aria-hidden="false"]{display:flex}
+.modal_contenido{background:#fff;width:100%;max-width:520px;border-radius:16px;padding:18px;box-shadow:0 10px 20px rgba(0,0,0,.18)}
+.modal_contenido h3{color:#2e7d32;margin-bottom:8px}
+.detalle_usuario p{margin:6px 0}
+.modal_acciones{display:flex;justify-content:flex-end;margin-top:10px}
+
+td>div[style*="display:flex"]{gap:12px!important}

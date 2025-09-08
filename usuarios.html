@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Administración de Usuarios</title>
+  <link rel="stylesheet" href="css/usuarios.css" />
+</head>
+<body>
+
+  <section class="seccion_usuarios">
+    <a href="home_admin.html" class="btn_volver">← Volver al Home</a>
+    <h1>Usuarios</h1>
+
+    <form id="form_usuario" class="card">
+      <h2 id="titulo_form">Nuevo Usuario</h2>
+      <input type="hidden" id="usuario_id" />
+      <div class="fila">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" placeholder="Nombre completo" required />
+      </div>
+      <div class="fila">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="correo@dominio.com" required />
+      </div>
+
+      <div class="fila">
+        <label for="rol">Rol</label>
+        <select id="rol" required>
+          <option value="">Selecciona un rol</option>
+          <option>Administrador</option>
+          <option>Vendedor</option>
+          <option>Cliente</option>
+        </select>
+      </div>
+
+      <div class="fila fila_check">
+        <label for="activo">Activo</label>
+        <input id="activo" type="checkbox" checked />
+      </div>
+
+      <div class="acciones_form">
+        <button type="submit" class="btn_guardar">Guardar</button>
+        <button type="button" id="btn_cancelar" class="btn_cancelar" style="display:none;">Cancelar</button>
+      </div>
+    </form>
+
+
+    <div class="card">
+      <div class="encabezado_lista">
+        <h2>Listado</h2>
+        <button id="btn_nuevo" class="btn_outlined">+ Nuevo</button>
+      </div>
+
+      <div class="tabla_wrap">
+        <table class="tabla_usuarios">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Rol</th>
+              <th>Estado</th>
+              <th style="width:180px">Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tbody_usuarios"><!-- filas JS --></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal_contenido">
+      <h3>Detalle de Usuario</h3>
+      <div id="detalle_usuario" class="detalle_usuario"><!-- info JS --></div>
+      <div class="modal_acciones">
+        <button id="cerrar_modal" class="btn_outlined">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/usuarios.js"></script>
+</body>
+</html>
