@@ -1,0 +1,31 @@
+:root{--fondo:#f6f8fb;--borde:#000000;--texto:#22324a}
+.panel-admin-body{margin:0;background:var(--fondo);color:var(--texto);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.panel-admin *{box-sizing:border-box}
+.panel-admin img{max-width:100%;height:auto} 
+.panel-admin .maqueta{display:grid;grid-template-columns:220px 1fr;min-height:100vh}
+.panel-admin .lateral{background:white;border-right:1px solid var(--borde);display:flex;flex-direction:column}
+.panel-admin .lateral__cabecera{display:flex;align-items:center;gap:8px;padding:10px;border-bottom:1px solid var(--borde)}
+.panel-admin .logo-lateral{height:30px}
+.panel-admin .marca{font-weight:700}
+.panel-admin .menu{padding:6px}
+.panel-admin .menu--inferior{margin-top:auto;border-top:1px solid var(--borde);padding-top:6px}
+.panel-admin .opcion{display:flex;gap:8px;align-items:center;padding:8px 10px;border-radius:6px;color:inherit;text-decoration:none}
+.panel-admin .opcion:hover{background:white}
+.panel-admin .opcion.activo{background:white}
+.panel-admin .contenido{display:flex;flex-direction:column}
+.panel-admin .barra-superior{display:flex;justify-content:space-between;align-items:center;background:#fff;border-bottom:1px solid var(--borde);padding:12px}
+.panel-admin .titulo{margin:0;font-weight:700}
+.panel-admin .bloque-superior{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:12px}
+.panel-admin .tarjeta{background:white;border:1px solid var(--borde);border-radius:8px;padding:12px}
+.panel-admin .tarjeta__etq{font-size:12px;opacity:.7}
+.panel-admin .tarjeta__num{font-weight:700;font-size:22px}
+.panel-admin .bloque-inferior{padding:0 12px 16px}
+.panel-admin .panel-grande{background:white;border:1px solid var(--borde);border-radius:8px}
+.panel-admin .panel-grande__titulo{padding:10px;border-bottom:1px solid var(--borde);font-weight:600}
+.panel-admin .panel-grande__caja{padding:12px;min-height:220px}
+@media (max-width:900px){
+  .panel-admin .maqueta{grid-template-columns:70px 1fr}
+  .panel-admin .marca,.panel-admin .opcion span{display:none}
+  .panel-admin .bloque-superior{grid-template-columns:repeat(2,1fr)}
+}
+

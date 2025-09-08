@@ -10,7 +10,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- site metas -->
-   <title>Contact</title>
+   <title>CONTACTANOS</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -41,16 +41,19 @@
             <ul class="lista_nav">
                <li class="item_nav"><a class="enlace_nav" href="index.html">Home</a></li>
                <li class="item_nav"><a class="enlace_nav" href="about.html">Sobre Nosotros</a></li>
-               <li class="item_nav"><a class="enlace_nav" href="coffees.html">PRODUCTOS</a></li>
-               <li class="item_nav"><a class="enlace_nav" href="shop.html">Shop</a></li>
-               <li class="item_nav"><a class="enlace_nav" href="blog.html">Blog</a></li>
+               <li class="item_nav"><a class="enlace_nav" href="carritoCompras.html">PRODUCTOS</a></li>
+               <li class="item_nav"><a class="enlace_nav" href="noticias.html">Blog</a></li>
                <li class="item_nav activo"><a class="enlace_nav" href="contact.html">CONTACTANOS</a></li>
 
             </ul>
 
             <div class="boton_login">
                <ul>
-                  <li><a href="#"><span class="user_icon"><i class="fa fa-user"></i></span>Login</a></li>
+                  <li>
+                     <a href="registro.html">
+                        <span class="user_icon"><i class="fa fa-user"></i></span>Login
+                     </a>
+                  </li>
                   <li><a href="#"><i class="fa fa-search"></i></a></li>
                </ul>
             </div>
@@ -75,24 +78,25 @@
                      <input type="text" class="mail_text" placeholder="Tu Nombre" name="Nombre" required>
                      <input type="text" class="mail_text" placeholder="Tu Correo" name="Email" required>
                      <input type="text" class="mail_text" placeholder="Numero Telefonico" name="Telefono" required>
-                     <textarea class="mail_text" placeholder="Mensaje" rows="5" id="comment" name="Mensaje" required></textarea>
+                     <textarea class="mail_text" placeholder="Mensaje" rows="5" id="comment" name="Mensaje"
+                        required></textarea>
                      <div class="send_bt"><button type="submit">Enviar</button></div>
                      <p id="msj-exito" style="display:none; color:#4CAF50; text-align:center; margin-top:12px;">
-                       Gracias Tu mensaje fue enviado :)
+                        Gracias Tu mensaje fue enviado :)
                      </p>
-                  </div>
                </div>
-               <div class="map_main">
-                  <div class="map-responsive">
-                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.820713948231!2d-70.6155478!3d-33.4327926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf7b8af466fd%3A0xc8fd2d768e783103!2sDuoc%20UC%3A%20Antonio%20Varas!5e0!3m2!1ses-419!2scl!4v1693950000000!5m2!1ses-419!2scl"
-                        width="250" height="500" frameborder="0" style="border:0; width: 100%;"
-                        allowfullscreen=""></iframe>
-                  </div>
+            </div>
+            <div class="map_main">
+               <div class="map-responsive">
+                  <iframe
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.820713948231!2d-70.6155478!3d-33.4327926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf7b8af466fd%3A0xc8fd2d768e783103!2sDuoc%20UC%3A%20Antonio%20Varas!5e0!3m2!1ses-419!2scl!4v1693950000000!5m2!1ses-419!2scl"
+                     width="250" height="500" frameborder="0" style="border:0; width: 100%;"
+                     allowfullscreen=""></iframe>
                </div>
             </div>
          </div>
       </div>
+   </div>
    </div>
    <!-- contact section end -->
    <!-- footer section start -->
@@ -140,34 +144,33 @@
    <script src="js/bootstrap.bundle.min.js"></script>
    <script src="js/jquery-3.0.0.min.js"></script>
    <script src="js/plugin.js"></script>
-   <!-- sidebar -->
    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
    <script src="js/custom.js"></script>
    <script>
-document.getElementById('form-contacto').addEventListener('submit', function(e){
-  e.preventDefault(); 
+      document.getElementById('form-contacto').addEventListener('submit', function (e) {
+         e.preventDefault();
 
-  const btn = this.querySelector('.send_bt button');
-  btn.disabled = true;
-  btn.textContent = 'Enviando...';
+         const btn = this.querySelector('.send_bt button');
+         btn.disabled = true;
+         btn.textContent = 'Enviando...';
 
- 
-  if (!this.checkValidity()) {
-    btn.disabled = false;
-    btn.textContent = 'Enviar';
-    this.reportValidity();
-    return;
-  }
 
-  
-  setTimeout(() => {
-    document.getElementById('msj-exito').style.display = 'block';
-    this.reset(); 
-    btn.disabled = false;
-    btn.textContent = 'Enviar';
-  }, 1000);
-});
-</script>
+         if (!this.checkValidity()) {
+            btn.disabled = false;
+            btn.textContent = 'Enviar';
+            this.reportValidity();
+            return;
+         }
+
+
+         setTimeout(() => {
+            document.getElementById('msj-exito').style.display = 'block';
+            this.reset();
+            btn.disabled = false;
+            btn.textContent = 'Enviar';
+         }, 1000);
+      });
+   </script>
 </body>
 
 </html>

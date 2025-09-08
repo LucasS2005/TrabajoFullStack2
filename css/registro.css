@@ -44,11 +44,19 @@ body {
 }
 
 .registro_form button:hover {
-  background-color: #6a1b9a; /* morado al pasar el mouse */
+  background-color: #6a1b9a; 
 }
 
 #mensajeError {
   color: red;
   text-align: center;
   margin-top: 10px;
+}
+
+.btn-volver{
+  margin: 12px 0 1000px;
+  border: 2px solid rgba(56, 210, 9, 0.66);
+  border-radius: 9px;
+  background: rgb(41, 142, 19);
+  color: black;
 }

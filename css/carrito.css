@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: linear-gradient(90deg, #6a1b9a, #2e7d32);
+  min-height: 100vh;
+}
+
+/* Sección carrito */
+.seccion_carrito {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.seccion_carrito h1, .seccion_carrito h2 {
+  text-align: center;
+  color: #ffffff; /* morado */
+  margin-bottom: 20px;
+}
+
+/* Tabla carrito */
+.tabla_carrito {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.tabla_carrito th, .tabla_carrito td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla_carrito th {
+  background-color: #2e7d32; /* verde */
+  color: #fff;
+  font-weight: bold;
+}
+
+.tabla_carrito td button {
+  background-color: #6a1b9a;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tabla_carrito td button:hover {
+  background-color: #2e7d32;
+}
+
+/* Resumen carrito */
+.resumen_carrito {
+  text-align: right;
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+.resumen_carrito button {
+  background-color: #6a1b9a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.resumen_carrito button:hover {
+  background-color: #2e7d32;
+}
+
+/* Productos disponibles */
+.contenedor_productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.tarjeta_producto {
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta_producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.tarjeta_producto img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.tarjeta_producto h3 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.tarjeta_producto p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.agregar_carrito {
+  background: linear-gradient(90deg, #6a1b9a, #2e7d32);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.agregar_carrito:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #2e7d32, #6a1b9a);
+}
+
+.cupon_carrito{
+  display:flex;
+  gap:10px;
+  justify-content:flex-end;
+  align-items:center;
+  margin:10px 0;
+}
+
+.cupon_carrito input{
+  padding:8px 12px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  min-width:220px;
+}
+
+.texto_descuento{
+  color:black;
+  font-weight:600;
+  text-align:right;
+  margin:6px 0;
+}
+
+.total_final{
+  font-size:1.4em;
+  font-weight:700;
+  text-align:right;
+}
