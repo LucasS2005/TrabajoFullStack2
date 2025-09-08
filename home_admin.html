@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FarmaCom — Panel Admin</title>
+
+
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+  <style>
+    
+    body{ font-family:'Poppins', sans-serif; background:f; color:#1f2f45; }
+    .admin-bar { background:#f0f4f8; border-top:1px solid #dbe3ea; border-bottom:1px solid #dbe3ea; padding:10px 0; }
+    .admin-bar .badge { background:#e6ecff; color:#2e3391; padding:3px 8px; border-radius:12px; font-size:12px; font-weight:700; margin-right:8px; }
+    .admin-bar .acciones a { border:1px solid #1f2f45; color:#1f2f45; padding:6px 10px; border-radius:6px; text-decoration:none; margin-left:6px; }
+    .admin-bar .acciones a:hover { background:#1f2f45; color:#fff; }
+
+    .titulo-seccion { padding:16px 0; border-bottom:1px solid #e4ebf0; margin-bottom:12px; }
+    .titulo-seccion h1 { font-size:24px; font-weight:800; margin:0; }
+    .titulo-seccion p { margin:4px 0 0; color:#6b7a93; font-size:14px; }
+
+    .box { border:1px solid #d9e2ea; border-radius:6px; padding:14px; height:100%; background:#fff; }
+    .box h3 { font-size:18px; font-weight:800; margin:0 0 6px; }
+    .box p { color:#6b7a93; margin:0 0 10px; font-size:14px; }
+    .metric { font-size:26px; font-weight:800; margin:0; }
+    .box .botones a { display:inline-block; margin-left:6px; margin-top:4px; text-decoration:none; }
+    .btn-prim { background:#1f2f45; color:#fff; padding:8px 12px; border-radius:6px; }
+    .btn-prim:hover { opacity:.95; color:#fff; }
+    .btn-sec { border:1px solid #1f2f45; color:#1f2f45; padding:8px 12px; border-radius:6px; }
+    .btn-sec:hover { background:#1f2f45; color:#fff; }
+    .btn-logout { border:1px solid #b33; color:#b33; padding:6px 10px; border-radius:6px; }
+    .btn-logout:hover { background:#b33; color:#fff; }
+
+
+    @media (max-width: 767.98px){
+      .admin-bar .acciones { margin-top:8px; }
+      .admin-bar .acciones a { margin:4px 6px 0 0; }
+    }
+  </style>
+
+  <script>
+    (function(){
+      if (localStorage.getItem('role') !== 'admin'){
+        location.replace('registro.html');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="contenido_principal">
+    <div class="header_section header_bg">
+      <div class="container-fluid px-2">
+        <nav class="barra_navegacion_vertical">
+          <a href="index.html">
+            <img src="images/Logo.webp" alt="FarmaCom Logo" class="logo_img">
+          </a>
+
+          <ul class="lista_nav">
+            <li class="item_nav"><a class="enlace_nav" href="index.html">Home</a></li>
+            <li class="item_nav"><a class="enlace_nav" href="about.html">Sobre Nosotros</a></li>
+            <li class="item_nav"><a class="enlace_nav" href="coffees.html">Productos</a></li>
+            <li class="item_nav"><a class="enlace_nav" href="shop.html">Shop</a></li>
+            <li class="item_nav"><a class="enlace_nav" href="blog.html">Blog</a></li>
+            <li class="item_nav"><a class="enlace_nav" href="contact.html">CONTACTANOS</a></li>
+          </ul>
+
+          <div class="boton_login">
+            <ul>
+              <li><span class="user_icon"><i class="fa fa-user" aria-hidden="true"></i></span> Admin</li>
+              <li><a id="logout" class="btn-logout" href="#"><i class="fa fa-sign-out"></i> Cerrar sesion</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div class="admin-bar">
+      <div class="container d-flex flex-column flex-md-row align-items-md-center justify-content-md-between">
+        <div>
+          <span class="badge">ADMIN</span>
+          <strong>Panel de administración</strong>
+        </div>
+        <div class="acciones">
+          <a href="productos_admin.html"><i class="fa fa-cubes"></i> Productos</a>
+          <a href="usuarios.html"><i class="fa fa-users"></i> Usuarios</a>
+          <a href="coffees.html"><i class="fa fa-eye"></i> Ver catálogo</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="titulo-seccion">
+      <div class="container">
+        <h1>Resumen</h1>
+        <p>Gestiona productos y usuarios del sitio.</p>
+      </div>
+    </div>
+
+    <main style="padding:16px 0 24px">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <div class="box d-flex flex-column">
+              <h3>Productos</h3>
+              <p>Crear, editar, eliminar y listar productos del catálogo.</p>
+              <div class="mt-auto d-flex align-items-end justify-content-between">
+                <div>
+                  <div style="color:#6b7a93; font-size:13px;">Total actuales </div>
+                  <p id="metric-products" class="metric">0</p>
+                </div>
+                <div class="botones">
+                  <a href="coffees.html" class="btn-sec">Ver catálogo</a>
+                  <a href="productos_admin.html" class="btn-prim">Gestionar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="box d-flex flex-column">
+              <h3>Usuarios</h3>
+              <p>Crear, editar, eliminar y listar usuarios (solo admin).</p>
+              <div class="mt-auto d-flex align-items-end justify-content-between">
+                <div>
+                  <div style="color:#6b7a93; font-size:13px;">Usuarios registrados</div>
+                  <p id="metric-users" class="metric">0</p>
+                </div>
+                <div class="botones">
+                  <a href="usuarios.html" class="btn-prim">Gestionar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>      
+      </div>
+    </main>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    
+    const PKEY='productos', UKEY='usuarios';
+    const defaultsProductos = [
+      {id:'paracetamol', nombre:'Paracetamol 500 mg', precio:5.00, imagen:'images/paracetamol 2.webp'},
+      {id:'ibuprofeno', nombre:'Ibuprofeno 400 mg', precio:7.00, imagen:'images/ibuprofeno2.webp'},
+      {id:'aspirina', nombre:'Aspirina 500 mg', precio:4.00, imagen:'images/aspirina.png'}
+    ];
+    if(!localStorage.getItem(PKEY)) localStorage.setItem(PKEY, JSON.stringify(defaultsProductos));
+    if(!localStorage.getItem(UKEY)) localStorage.setItem(UKEY, JSON.stringify([
+      {id:1,nombre:'Admin',email:'admin@farmacom.cl',rol:'admin'},
+      {id:2,nombre:'Usuario Demo',email:'user@demo.cl',rol:'user'}
+    ]));
+
+    const productos = JSON.parse(localStorage.getItem(PKEY)||'[]');
+    const usuarios  = JSON.parse(localStorage.getItem(UKEY)||'[]');
+
+    document.getElementById('metric-products').textContent = productos.length;
+    document.getElementById('metric-users').textContent    = usuarios.length;
+
+  
+    document.getElementById('logout').addEventListener('click', function(e){
+      e.preventDefault();
+      localStorage.removeItem('auth');
+      localStorage.removeItem('role');
+      location.href='registro.html';
+    });
+  </script>
+</body>
+</html>

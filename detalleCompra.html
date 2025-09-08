@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Detalle Productos</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+  <style>
+    .detalle-hero {
+      background: #1f2f45;
+      color: #fff;
+      padding: 18px 20px;
+      border-radius: 12px;
+      margin: 24px 0 20px;
+    }
+    .detalle-hero .breadcrumb-detalle { color: #fff; margin: 0 0 6px; font-size: 14px }
+    .detalle-hero .detalle-title { color: #fff; font-size: 44px; font-weight: 800; letter-spacing: .5px; margin: 0 }
+
+    .btn-volver {
+      background: transparent; border: 2px solid #fff; color: #fff; font-weight: 700;
+      border-radius: 999px; padding: 8px 14px; display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-volver:hover { background: #fff; color: #1f2f45; text-decoration: none }
+
+    .detalle-wrap { padding: 0 0 32px }
+    .precio-detalle { font-size: 28px; font-weight: 700; margin: 6px 0 12px }
+    .rating i { color: #f6b21a; margin-right: 2px }
+    .miniaturas a { display: inline-block; border: 1px solid #eee; border-radius: 6px; padding: 6px; margin-right: 10px }
+    .miniaturas img { max-width: 90px }
+    .separador { margin: 28px 0 }
+    .tabs-linea { display: flex; gap: 28px; border-bottom: 2px solid #e9eef3; margin-bottom: 14px }
+    .tabs-linea b { position: relative; padding: 8px 0 }
+    .tabs-linea b.activo::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 3px; background: #1f2f45; border-radius: 3px }
+    .rel-card .coffee_img img { width: 100%; height: auto }
+
+    .atributos { margin: 8px 0 12px }
+    .atributos .grupo { margin-bottom: 6px }
+    .atributos .etiqueta { font-weight: 600; font-size: 14px; margin-right: 6px; color: #4b5a6a }
+    .chip { display: inline-block; border: 1px solid #e6ecf2; padding: 6px 10px; border-radius: 999px; font-size: 13px; margin: 3px 6px 3px 0; background: #f9fbfd }
+    .nota-info { font-size: 13px; color: #7a8a9a; background: #f3f6fa; border: 1px solid #e6ecf2; border-radius: 8px; padding: 8px 10px; display: inline-flex; align-items: center; gap: 6px }
+  </style>
+</head>
+
+<body>
+  <div class="header_section header_bg">
+    <div class="container-fluid px-2">
+      <nav class="barra_navegacion_vertical">
+        <a href="index.html"><img src="images/Logo.webp" alt="FarmaCom Logo" class="logo_img"></a>
+        <ul class="lista_nav">
+          <li class="item_nav"><a class="enlace_nav" href="index.html">Home</a></li>
+          <li class="item_nav"><a class="enlace_nav" href="about.html">Sobre Nosotros</a></li>
+          <li class="item_nav activo"><a class="enlace_nav" href="coffees.html">Productos</a></li>
+          <li class="item_nav"><a class="enlace_nav" href="shop.html">Shop</a></li>
+          <li class="item_nav"><a class="enlace_nav" href="blog.html">Blog</a></li>
+          <li class="item_nav"><a class="enlace_nav" href="contact.html">CONTACTANOS</a></li>
+        </ul>
+        <div class="boton_login">
+          <ul>
+            <li>
+              <a href="registro.html">
+                <span class="user_icon"><i class="fa fa-user"></i></span>Login
+              </a>
+            </li>
+            <li><a href="#"><i class="fa fa-search"></i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <main class="contenido_principal">
+    <div class="container detalle-wrap">
+
+      <div class="detalle-hero">
+        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between">
+          <div>
+            <div class="breadcrumb-detalle">
+              <a href="index.html" style="color:#fff; text-decoration:underline;">HOME</a> /
+              <a href="coffees.html" style="color:#fff; text-decoration:underline;">DETALLE PRODUCTOS</a>
+            </div>
+            <h1 class="detalle-title">DETALLE PRODUCTOS</h1>
+          </div>
+          <div class="mt-3 mt-md-0">
+            <a href="index.html" class="btn-volver"><i class="fa fa-arrow-left"></i> Volver al Home</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="coffee_img" style="margin-bottom:12px;">
+            <img id="prod-imagen" src="images/aspirina.png" alt="Producto" />
+          </div>
+          <div class="miniaturas" id="miniaturas"></div>
+        </div>
+
+        <div class="col-lg-6">
+          <h2 id="prod-nombre" style="font-weight:800; margin:0 0 6px;">Producto</h2>
+          <div class="rating" aria-label="Valoración">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+            <span style="color:#8c8c8c;">(4)</span>
+          </div>
+
+          <div class="precio-detalle">$<span id="prod-precio">0.00</span></div>
+
+          <div class="atributos" id="atributos">
+            <div class="grupo" id="grupo-tamano">
+              <span class="etiqueta">Presentaciones:</span>
+              <span id="chips-tamano"></span>
+            </div>
+            <div class="grupo" id="grupo-color">
+              <span class="etiqueta">Color:</span>
+              <span id="chips-color"></span>
+            </div>
+          </div>
+
+          <div class="nota-info"><i class="fa fa-info-circle"></i> Vista informativa: no disponible compra online.</div>
+        </div>
+      </div>
+
+      <div class="separador"><hr></div>
+
+      <div class="tabs-linea">
+        <b class="activo">Descripción</b>
+        <b>Reseñas (4)</b>
+        <b>Productos Relacionados</b>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-7">
+          <p id="prod-descripcion" style="margin-bottom:18px;">
+            Texto de ejemplo de descripción del producto.
+          </p>
+        </div>
+        <div class="col-lg-5">
+          <div class="row" id="relacionados"></div>
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+
+  <!-- Footer igual a tus páginas -->
+  <div class="footer">
+    <div class="iconos_footer">
+      <ul>
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+      </ul>
+    </div>
+    <div class="contacto_footer">
+      <p><i class="fa fa-phone"></i> +569 57291854 &nbsp;&nbsp;
+        <i class="fa fa-envelope"></i> duocuc@gmail.com
+      </p>
+    </div>
+    <div class="suscripcion_footer">
+      <input type="email" class="poner_correo" placeholder="Tu correo">
+      <button class="boton_enviar"><i class="fa fa-arrow-right"></i></button>
+    </div>
+  </div>
+  <div class="texto_footer">
+    <p>2025 Todos los Derechos Reservados. Diseñado por Lucas 🚀</p>
+  </div>
+
+ 
+  <script>
+    const CATALOGO = {
+      paracetamol:{id:"paracetamol",nombre:"Paracetamol 500 mg",precio:5.00,imagen:"images/paracetamol 2.webp",miniaturas:["images/paracetamol 2.webp"],variantes:{tamano:["10u","20u"],color:["Blanco"]},descripcion:"Analgésico y antipirético. Presentación en tabletas.",relacionados:["ibuprofeno","aspirina"]},
+      ibuprofeno:{id:"ibuprofeno",nombre:"Ibuprofeno 400 mg",precio:7.00,imagen:"images/ibuprofeno2.webp",miniaturas:["images/ibuprofeno2.webp"],variantes:{tamano:["10u","20u"],color:["Blanco"]},descripcion:"AINE para dolor leve a moderado.",relacionados:["paracetamol","naproxeno"]},
+      aspirina:{id:"aspirina",nombre:"Aspirina 500 mg",precio:4.00,imagen:"images/aspirina.png",miniaturas:["images/aspirina.png"],variantes:{tamano:["10u","24u"],color:["Blanco"]},descripcion:"Ácido acetilsalicílico. Analgésico y antipirético.",relacionados:["ibuprofeno","paracetamol"]},
+      omeprazol:{id:"omeprazol",nombre:"Omeprazol 20 mg",precio:12.00,imagen:"images/omeprazol.jpg",miniaturas:["images/omeprazol.jpg"],variantes:{tamano:["14cps","28cps"],color:["Blanco"]},descripcion:"Para reflujo y acidez.",relacionados:["paracetamol","vitamina-c"]},
+      amoxicilina:{id:"amoxicilina",nombre:"Amoxicilina 500 mg",precio:10.00,imagen:"images/amoxicilina.jpg",miniaturas:["images/amoxicilina.jpg"],variantes:{tamano:["10u","20u"],color:["Blanco"]},descripcion:"Antibiótico. Usar según indicación profesional.",relacionados:["paracetamol","ibuprofeno"]},
+      "panales-bebe":{id:"panales-bebe",nombre:"Pañales Bebé (M)",precio:12.99,imagen:"images/pañales.webp",miniaturas:["images/pañales.webp"],variantes:{tamano:["M","L","XL"],color:["Blanco"]},descripcion:"Pañales absorbentes para bebés.",relacionados:["crema","suero"]},
+      "vitamina-c":{id:"vitamina-c",nombre:"Vitamina C 1 g",precio:3.25,imagen:"images/vitaminaC2.png",miniaturas:["images/vitaminaC2.png"],variantes:{tamano:["10u","20u"],color:["Naranja"]},descripcion:"Suplemento de vitamina C.",relacionados:["paracetamol","omeprazol"]},
+      suero:{id:"suero",nombre:"Suero Fisiológico 0,9%",precio:2.99,imagen:"images/suerox.png",miniaturas:["images/suerox.png"],variantes:{tamano:["250 ml","500 ml","1 L"],color:["Transparente"]},descripcion:"Solución salina isotónica.",relacionados:["vitamina-c","crema"]},
+      crema:{id:"crema",nombre:"Crema Hidratante",precio:9.99,imagen:"images/crema.jpg",miniaturas:["images/crema.jpg"],variantes:{tamano:["50 ml","100 ml"],color:["—"]},descripcion:"Cuidado de la piel.",relacionados:["panales-bebe","suero"]},
+      naproxeno:{id:"naproxeno",nombre:"Naproxeno 500 mg",precio:17.52,imagen:"images/naproxeno.jpg",miniaturas:["images/naproxeno.jpg"],variantes:{tamano:["10u","20u"],color:["Blanco"]},descripcion:"AINE para dolor e inflamación.",relacionados:["ibuprofeno","paracetamol"]},
+      bloqueador:{id:"bloqueador",nombre:"Bloqueador Solar FPS 50",precio:11.99,imagen:"images/bloqueador.webp",miniaturas:["images/bloqueador.webp"],variantes:{tamano:["100 ml","200 ml"],color:["—"]},descripcion:"Protección UV alta.",relacionados:["crema","shampoo"]},
+      cetirizina:{id:"cetirizina",nombre:"Cetirizina 10 mg",precio:6.90,imagen:"images/cetirizina3.webp",miniaturas:["images/cetirizina3.webp"],variantes:{tamano:["10u","20u"],color:["Blanco"]},descripcion:"Antihistamínico para alergias.",relacionados:["vitamina-c","suero"]},
+      shampoo:{id:"shampoo",nombre:"Shampoo Anticaspa",precio:7.80,imagen:"images/shampoo.webp",miniaturas:["images/shampoo.webp"],variantes:{tamano:["200 ml","400 ml"],color:["—"]},descripcion:"Limpieza y control de caspa.",relacionados:["bloqueador","crema"]}
+    };
+
+    const $ = (s)=>document.querySelector(s);
+    const el = {
+      img: $('#prod-imagen'),
+      thumbs: $('#miniaturas'),
+      nombre: $('#prod-nombre'),
+      precio: $('#prod-precio'),
+      desc: $('#prod-descripcion'),
+      chipsTam: $('#chips-tamano'),
+      chipsCol: $('#chips-color'),
+      grpTam: document.getElementById('grupo-tamano'),
+      grpCol: document.getElementById('grupo-color'),
+      rel: document.getElementById('relacionados')
+    };
+
+    function precio(n){ return (Math.round(n*100)/100).toFixed(2); }
+
+    const params = new URLSearchParams(location.search);
+    const id = params.get('producto') || 'paracetamol';
+    const p = CATALOGO[id];
+
+    function render(){
+      if(!p){ document.querySelector('.container').innerHTML = '<h2>Producto no encontrado</h2>'; return; }
+
+      el.img.src = p.imagen; el.img.alt = p.nombre;
+      el.nombre.textContent = p.nombre;
+      el.precio.textContent = precio(p.precio);
+      el.desc.textContent = p.descripcion || '';
+
+      el.thumbs.innerHTML = '';
+      (p.miniaturas && p.miniaturas.length ? p.miniaturas : [p.imagen]).forEach(src=>{
+        const a = document.createElement('a');
+        a.href = '#';
+        a.innerHTML = `<img src="${src}" alt="thumb">`;
+        a.addEventListener('click', (e)=>{e.preventDefault(); el.img.src = src;});
+        el.thumbs.appendChild(a);
+      });
+
+      if(p.variantes?.tamano?.length){
+        el.grpTam.style.display='';
+        el.chipsTam.innerHTML = p.variantes.tamano.map(t=>`<span class="chip">${t}</span>`).join('');
+      } else { el.grpTam.style.display='none'; }
+
+      if(p.variantes?.color?.length){
+        el.grpCol.style.display='';
+        el.chipsCol.innerHTML = p.variantes.color.map(c=>`<span class="chip">${c}</span>`).join('');
+      } else { el.grpCol.style.display='none'; }
+
+      el.rel.innerHTML = '';
+      (p.relacionados||[]).forEach(relId=>{
+        const r = CATALOGO[relId]; if(!r) return;
+        const col = document.createElement('div');
+        col.className = 'col-sm-6 rel-card';
+        col.innerHTML = `
+          <a class="producto-link" href="detalleCompra.html?producto=${r.id}">
+            <div class="coffee_img"><img src="${r.imagen}" alt="${r.nombre}"></div>
+            <div class="coffee_box">
+              <h3 class="types_text" style="font-size:16px;">${r.nombre}</h3>
+              <div class="read_bt"><span>$${precio(r.precio)}</span></div>
+            </div>
+          </a>`;
+        el.rel.appendChild(col);
+      });
+    }
+    render();
+  </script>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - Farmacia Online</title>
+  <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+  <div class="registro_container">
+    <form id="formularioRegistro" class="registro_form">
+      <h2>Registro de Usuario</h2>
+
+      <input type="text" id="nombre" placeholder="Nombre" required>
+      <input type="text" id="apellido" placeholder="Apellido" required>
+      <input type="text" id="rut" placeholder="RUT (ej: 12.345.678-9)" required>
+      <input type="email" id="correo" placeholder="Correo (.cl o .com)" required>
+      <input type="password" id="contrasena" placeholder="Contraseña (mín. 6 caracteres, sin símbolos)" required>
+
+      <select id="region" required>
+        <option value="">Selecciona tu región</option>
+        <option value="Metropolitana">Metropolitana</option>
+        <option value="Valparaíso">Valparaíso</option>
+        <option value="Biobío">Biobío</option>
+      </select>
+
+      <select id="comuna" required>
+        <option value="">Selecciona tu comuna</option>
+      </select>
+
+      <button type="submit">Registrarse</button>
+      <p id="mensajeError"></p>
+    </form>
+  </div>
+
+
+  <script src="js/registro.js"></script>
+</body>
+</html>
