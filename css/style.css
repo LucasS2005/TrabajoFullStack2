@@ -122,15 +122,13 @@ button{border:0; margin:0; padding:0; cursor:pointer;}
 .about_taital_box{ width:100%; float:left; padding-top:15px; transform: translateY(240px);margin-left: -200px;  }
 
 
-/* Clase que usas en la imagen de about */
+
 .imagen-sobre {
   width: 100%;
   border-radius: 55%;  
   margin-left: 50%;     
   margin-top: -200px;  
 }
-
-
 .about_taital_1{ width:100%; float:left; font-size:30px; color:#3b3b3b; margin:10px 0; }
 .about_text{ width:100%; float:left; font-size:16px; color:#232222; margin:0; }
 .readmore_btn{ width:170px; float:left; margin-top:40px; }
@@ -144,7 +142,7 @@ button{border:0; margin:0; padding:0; cursor:pointer;}
 .coffee_section{ width:100%; float:left; }
 .coffee_taital{position: relative; width:100%; float:left; font-size:40px; color:#3b3b3b; text-transform:uppercase; text-align:center; font-weight:bold; padding-bottom:0; top: -80px; margin-bottom: 8px; }
 .coffee_section_2{ width:90%; margin:0 auto; text-align:center; padding-top:40px; }
-.coffee_img img{ width:100%; float:left; }
+.coffee_img img{ width:100%; float:left;  border: 6px solid #4CAF50; border-radius: 12px; box-shadow: black;}
 .coffee_box{ width:100%; float:left; background-color:#242c2f;}
 .coffee_box:hover{ background-color:#f01c1c; }
 .types_text{ width:100%; float:left; font-size:15px; color:#fefefd; text-align:center; font-weight:bold; }
@@ -405,7 +403,7 @@ body {
 .subtitulo-sobre,
 .texto-sobre,
 .titulo-contacto {
-  color: #ffffff !important; /* blanco para contraste */
+  color: #ffffff !important; 
 }
 .titulo-contacto{
   font-size: 40px;
@@ -416,14 +414,12 @@ body {
 
 @media (max-width: 768px){
 
-  /* 1) Fila de SOBRE NOSOTROS: apilar y centrar */
   .seccion-sobre .fila{
     display: flex;
     flex-direction: column-reverse;  
     align-items: center;
     min-height: auto;
   }
-
 
   .caja-texto-sobre{
     transform: none;
@@ -438,114 +434,9 @@ body {
     border-radius: 20px;
   }
 }
-
-
-@media (max-width: 480px){
-  .titulo-contacto{ font-size: 28px; }
-  
-}
-
-.formulario-contacto{
-  width:70%;
-  max-width:760px;
-  margin:0 auto;
-}
-
-.campo-texto,
-.mail_text{
-  width:100%;
-  float:left;
-  font-size:16px;
-  color:#2e2e2d;
-  border:0;
-  background:#efefef;
-  padding:11px 20px;
-  margin-top:20px;
-  border-radius:40px;
-  font-family:'Poppins',sans-serif;
-}
-
-.campo-mensaje,
-.massage-bt{
-  color:#2e2e2d;
-  width:100%;
-  height:140px;                  
-  font-size:18px;
-  background:#efefef;
-  padding:16px 20px 0 20px;
-  border:0;
-  margin-top:20px;
-  border-radius:40px;
-  font-family:'Poppins',sans-serif;
-}
-
-
 .send_bt{ width:170px; margin:16px auto 0; text-align:center; }
-
-
 .map_main{ margin-top:40px; }
 .map_main iframe{ height:350px !important; border-radius:12px; }
-
-
-@media (max-width: 480px){
-
-  .barra_navegacion_vertical{ width: 96px; }
-  body{ margin-left: 96px; }
-
-  .titulo-contacto{
-    font-size: 24px;
-    line-height: 1.2;
-    padding: 0 10px;
-    text-align: center;
-  }
-
-  .formulario-contacto{
-    width: 100%;
-    max-width: none;
-    padding: 0 12px;
-  }
-  .campo-texto,
-  .mail_text{
-    font-size: 14px;
-    padding: 10px 14px;
-    border-radius: 22px;
-  }
-  .campo-mensaje,
-  .massage-bt{
-    height: 120px;
-    font-size: 14px;
-    padding: 12px 14px 0 14px;
-    border-radius: 16px;
-  }
-  .send_bt a{
-    width: 160px;
-    border-radius: 22px;
-    font-size: 15px;
-  }
-
-  
-  .map_main{ margin-top: 24px; padding: 0 12px; }
-  .map_main .map-responsive,
-  .map_main iframe{
-    width: 100% !important;
-    height: 240px !important;
-    min-width: 100%;
-    border-radius: 10px;
-  }
-
-  
-  .footer{ padding: 24px 12px; text-align: center; }
-  .iconos_footer ul{ gap: 10px; }
-  .suscripcion_footer{
-    flex-direction: column;
-    gap: 8px;
-    max-width: 90%;
-  }
-  .poner_correo{ width: 100%; border-radius: 8px; }
-  .boton_enviar{ width: 100%; border-radius: 8px; }
-  .texto_footer{ padding: 10px 12px; }
-}
-
 
 .send_bt button {
   background-color: #f01c1c; 
@@ -585,8 +476,8 @@ body {
 }
 
 .subir-carrusel {
-  margin-top: -78px;
-  margin-bottom: 27px; 
+  margin-top: 0;
+  margin-bottom: 29px; 
 }
 
 .carrusel-pequeno .carousel-indicators {
@@ -605,91 +496,221 @@ body {
   background-color: #4CAF50;   
 }
 
-
-.productos_seccion_2 .carousel-item .row{
-  margin-left: -16px;   
-  margin-right: -16px;
-}
-
-.productos_seccion_2 .carousel-item [class*="col-"]{
-  padding-left: 16px;   
-  padding-right: 16px;
-  margin-bottom: 24px;  
-}
-
-
-@media (min-width: 992px){
-  .productos_seccion_2 .carousel-item .row{
-    margin-left: -24px;
-    margin-right: -24px;
-  }
-  .productos_seccion_2 .carousel-item [class*="col-"]{
-    padding-left: 24px;
-    padding-right: 40px;
-  }
-}
-
 .productos_descuento{
   padding: 12px 0 40px;
 }
 
 .titulo-secundaria{
-  top: 0;               
-  margin: 0 0 14px 0;     
+  color: white;
+  font-size: 37px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 100px 0 0;
+      
+}
+
+.tarjeta_producto{ 
+  display:flex; 
+  flex-direction:column; 
+}
+.tarjeta_producto .coffee_img{
+  height:160px;                 
+  display:flex; 
+  align-items:center; 
+  justify-content:center;
+  padding:8px;
+}
+.tarjeta_producto .coffee_img img{
+  max-height:100%;
+  width:auto;
+  object-fit:contain;          
+}
+.tarjeta_producto .coffee_box{
+  min-height:120px;            
+  display:flex; 
+  flex-direction:column; 
+  gap:6px;
+  padding:12px;
+}
+.tarjeta_producto .types_text{ 
+  font-size:14px;              
 }
 
 .rejilla_productos{
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 20px;                            
+  width:90%;
+  max-width:1100px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(2, 1fr); 
+  gap:20px;
+}
+
+@media (min-width:576px){
+  .rejilla_productos{ grid-template-columns:repeat(3, 1fr); }
 }
 
 
-@media (min-width: 576px){
-  .rejilla_productos{ grid-template-columns: repeat(3, 1fr); }
-}
-
-@media (min-width: 768px){
-  .rejilla_productos{ grid-template-columns: repeat(4, 1fr); }
-}
-
-@media (min-width: 1200px){
-  .rejilla_productos{ grid-template-columns: repeat(5, 1fr); }
+@media (min-width:768px){
+  .rejilla_productos{ grid-template-columns:repeat(4, 1fr); }
 }
 
 
-.tarjeta_producto .coffee_box{
-  padding: 12px;
+@media (min-width:1200px){
+  .rejilla_productos{ grid-template-columns:repeat(5, 1fr); }
 }
 
-.tarjeta_producto .types_text{
-  font-size: 14px;       
-}
-
-@media (max-width: 480px){
+@media (max-width:576px){
+  .productos_descuento{ 
+    padding:8px 0 28px; 
+  }
   .rejilla_productos{
-    grid-template-columns: 1fr;   
-    gap: 16px;                   
+    grid-template-columns:1fr;  
+    gap:14px;
+    width:92%;
   }
-
+  .tarjeta_producto .coffee_img{
+    height:auto;
+    padding-top:8px;
+  }
   .tarjeta_producto .coffee_img img{
-    max-width: 80%;             
-    margin: 0 auto;              
+    max-width:86%;
+    margin:0 auto;
   }
-
-  .tarjeta_producto .coffee_box{
-    padding: 10px;
+  .tarjeta_producto .coffee_box{ 
+    padding:10px; 
   }
-
-  .tarjeta_producto .types_text{
-    font-size: 14px;            
-  }
-
   .tarjeta_producto .read_bt a{
-    font-size: 14px;            
-    padding: 6px 10px;
+    font-size:13px;
+    padding:6px 10px;
+    white-space:normal;
+    line-height:1.25;
   }
+
+  .coffee_taital{ 
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0 0 24px;
+    position: relative;
+     
+
+  }
+}
+
+.franja-beneficios {
+  width: 100%;
+  background-color: #4CAF50;  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+  margin: 40px 0;   
+  color: #fff;
+  text-align: center;
+  flex-wrap: wrap;  
+}
+
+.franja-beneficios .beneficio {
+  flex: 1;
+  min-width: 120px;
+  margin: 10px;
+}
+
+.franja-beneficios i {
+  font-size: 28px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.franja-beneficios p {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+@media (max-width: 576px){
+ 
+  .barra_navegacion_vertical{ width: 88px; }
+  body{ margin-left: 88px; }
+
+  .barra_navegacion_vertical .lista_nav{ padding: 0 8px; }
+  .barra_navegacion_vertical .item_nav{ margin: 0 0 6px 0; }
+  .barra_navegacion_vertical .logo_img{ height: 36px; margin-bottom: 8px; }
+
+ 
+  .barra_navegacion_vertical .enlace_nav{
+    font-size: 11px;
+    padding: 8px 6px;
+    line-height: 1.15;
+    text-align: center;
+    white-space: normal;
+    word-break: break-word;
+    hyphens: auto;
+  }
+  .barra_navegacion_vertical .boton_login{ padding: 0 8px; }
+  .barra_navegacion_vertical .boton_login a{
+    font-size: 0;
+    display: flex; align-items: center; justify-content: center;
+    padding: 10px 0;
+  }
+  .barra_navegacion_vertical .boton_login a .fa{ font-size: 18px; }
+
+  .coffee_taital{
+    position: static;
+    top: auto;
+    color: #fff !important;
+    font-size: 28px;
+    line-height: 1.15;
+    margin: 16px 0 18px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+  .titulo-secundaria{
+    color:#fff !important;
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 24px 0 14px;
+    text-align:center;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+  .titulo-contacto{ font-size: 24px; line-height: 1.2; padding: 0 10px; }
+  .subir-carrusel{ margin-top: 0; margin-bottom: 20px; }
+  .productos_descuento{ padding: 8px 0 28px; }
+  .rejilla_productos{
+    grid-template-columns: 1fr;
+    gap: 14px;
+    width: 92%;
+  }
+  .tarjeta_producto .coffee_img{ height: auto; padding-top: 8px; }
+  .tarjeta_producto .coffee_img img{ max-width: 86%; margin: 0 auto; }
+  .tarjeta_producto .coffee_box{ padding: 10px; }
+  .tarjeta_producto .read_bt a{
+    font-size: 13px; padding: 6px 10px; white-space: normal; line-height: 1.25;
+  }
+
+  .formulario-contacto{ width: 100%; max-width: none; padding: 0 12px; }
+  .campo-texto, .mail_text{ font-size: 14px; padding: 10px 14px; border-radius: 22px; }
+  .campo-mensaje, .massage-bt{
+    height: 120px; font-size: 14px; padding: 12px 14px 0 14px; border-radius: 16px;
+  }
+  .send_bt a{ width: 160px; border-radius: 22px; font-size: 15px; }
+
+ 
+  .map_main{ margin-top: 24px; padding: 0 12px; }
+  .map_main .map-responsive, .map_main iframe{
+    width: 100% !important; height: 240px !important; min-width: 100%; border-radius: 10px;
+  }
+
+  .footer{ padding: 24px 12px; text-align: center; }
+  .iconos_footer ul{ gap: 10px; }
+  .suscripcion_footer{ flex-direction: column; gap: 8px; max-width: 90%; }
+  .poner_correo{ width: 100%; border-radius: 8px; }
+  .boton_enviar{ width: 100%; border-radius: 8px; }
+  .texto_footer{ padding: 10px 12px; }
 }
